@@ -1,0 +1,466 @@
+.YELLOW {
+    color: #FFFF55;
+    font-weight: bold;
+}
+
+.DARK_RED {
+    color: #AA0000;
+    font-weight: bold;
+}
+
+.GOLD {
+    color: #FFAA00;
+    font-weight: bold;
+}
+
+.BLUE {
+    color: #5555FF;
+    font-weight: bold;
+}
+
+.LIGHT_BLUE {
+    color: #55FFFF;
+    font-weight: bold;
+}
+
+.DARK_GREEN {
+    color: #00AA00;
+    font-weight: bold;
+}
+
+.GREEN {
+    color: #55FF55;
+    font-weight: bold;
+}
+
+.PINK {
+    color: #FF55FF;
+    font-weight: bold;
+}
+
+.WHITE {
+    color: WHITE;
+    font-weight: bold;
+}
+
+.DARK_AQUA {
+    color: #00AAAA;
+    font-weight: bold;
+}
+
+.BLACK {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.DARK_PURPLE {
+    color: #AA00AA;
+    font-weight: bold;
+}
+
+.LIGHT_PURPLE {
+    color: #FF55FF;
+    font-weight: bold;
+}
+
+.DARK_GREY {
+    color: #555555;
+    font-weight: bold;
+}
+
+.GREY {
+    color: #AAAAAA;
+    font-weight: bold;
+}
+
+.DARK_BLUE {
+    color: #0000AA;
+}
+
+.AQUA {
+    color: #00AAAA;
+}
+
+.RED {
+    color: #FF5555;
+}
+
+.useranmetitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+/* Background colour classes */
+.bYELLOW {
+    background-color: #FFFF55;
+    font-weight: bold;
+}
+
+.bDARK_RED {
+    background-color: #AA0000;
+    font-weight: bold;
+}
+
+.bGOLD {
+    background-color: #FFAA00;
+    font-weight: bold;
+}
+
+.bBLUE {
+    background-color: #5555FF;
+    font-weight: bold;
+}
+
+.bLIGHT_BLUE {
+    background-color: #55FFFF;
+    font-weight: bold;
+}
+
+.bDARK_GREEN {
+    background-color: #00AA00;
+    font-weight: bold;
+}
+
+.bGREEN {
+    background-color: #55FF55;
+    font-weight: bold;
+}
+
+.bPINK {
+    background-color: #FF55FF;
+    font-weight: bold;
+}
+
+.bWHITE {
+    background-color: WHITE;
+    font-weight: bold;
+}
+
+.bDARK_AQUA {
+    background-color: #00AAAA;
+    font-weight: bold;
+}
+
+.bBLACK {
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.bDARK_PURPLE {
+    background-color: #AA00AA;
+    font-weight: bold;
+}
+
+.bLIGHT_PURPLE {
+    background-color: #FF55FF;
+    font-weight: bold;
+}
+
+.bDARK_GREY {
+    background-color: #555555;
+    font-weight: bold;
+}
+
+.bGREY {
+    background-color: #AAAAAA;
+    font-weight: bold;
+}
+
+.bDARK_BLUE {
+    background-color: #0000AA;
+}
+
+.bAQUA {
+    background-color: #55FFFF;
+}
+
+.bRED {
+    color: #FF5555;
+}
+
+/* Progress bar width styles */
+#zero {width: 0%}
+#one {width: 1%}
+#two {width: 2%}
+#three {width: 3%}
+#four {width: 4%}
+#five {width: 5%}
+#six {width: 6%}
+#seven {width: 7%}
+#eight {width: 8%}
+#nine {width: 9%}
+#ten {width: 10%}
+#eleven {width: 11%}
+#twelve {width: 12%}
+#thirteen {width: 13%}
+#fourteen {width: 14%}
+#fifteen {width: 15%}
+#sixteen {width: 16%}
+#seventeen {width: 17%}
+#eighteen {width: 18%}
+#nineteen {width: 19%}
+#twenty {width: 20%}
+#twenty-one {width: 21%}
+#twenty-two {width: 22%}
+#twenty-three {width: 23%}
+#twenty-four {width: 24%}
+#twenty-five {width: 25%}
+#twenty-six {width: 26%}
+#twenty-seven {width: 27%}
+#twenty-eight {width: 28%}
+#twenty-nine {width: 29%}
+#thirty {width: 30%}
+#thirty-one {width: 31%}
+#thirty-two {width: 32%}
+#thirty-three {width: 33%}
+#thirty-four {width: 34%}
+#thirty-five {width: 35%}
+#thirty-six {width: 36%}
+#thirty-seven {width: 37%}
+#thirty-eight {width: 38%}
+#thirty-nine {width: 39%}
+#fifty {width: 40%}
+#fourty-one {width: 41%}
+#fourty-two {width: 42%}
+#fourty-three {width: 43%}
+#fourty-four {width: 44%}
+#fourty-five {width: 45}
+#fourty-six {width: 46%}
+#fourty-seven {width: 47%}
+#fourty-eight {width: 48%}
+#fourty-nine {width: 49%}
+#fifty {width: 50%}
+#fifty-one {width: 51%}
+#fifty-two {width: 52%}
+#fifty-three {width: 53%}
+#fifty-four {width: 54%}
+#fifty-five {width: 55%}
+#fifty-six {width: 56%}
+#fifty-seven {width: 57%}
+#fifty-eight {width: 58%}
+#fifty-nine {width: 59%}
+#sixty {width: 60%}
+#sixty-one {width: 61%}
+#sixty-two {width: 62%}
+#sixty-three {width: 63%}
+#sixty-four {width: 64%}
+#sixty-five {width: 65%}
+#sixty-six {width: 66%}
+#sixty-seven {width: 67%}
+#sixty-seight {width: 68%}
+#sixty-nine {width: 69%}
+#seventy {width: 70%}
+#seventy-one {width: 71%}
+#seventy-two {width: 72%}
+#seventy-three {width: 73%}
+#seventy-four {width: 74%}
+#seventy-five {width: 75%}
+#seventy-six {width: 76%}
+#seventy-seven {width: 77%}
+#seventy-eight {width: 78%}
+#seventy-nine {width: 79%}
+#eighty {width: 80%}
+#eighty-one {width: 81%}
+#eighty-two {width: 82%}
+#eighty-three {width: 83%}
+#eighty-four {width: 84%}
+#eighty-five {width: 85%}
+#eighty-six {width: 86%}
+#eighty-seven {width: 87%}
+#eighty-eight {width: 88%}
+#eighty-nine {width: 89%}
+#ninety {width: 90%}
+#ninety-one {width: 91%}
+#ninety-two {width: 92%}
+#ninety-three {width: 93%}
+#ninety-four {width: 94%}
+#ninety-five {width: 95%}
+#ninety-six {width: 96%}
+#ninety-seven {width: 97%}
+#ninety-eight {width: 98%}
+#ninety-nine {width: 99%}
+#onehundred {width: 100%}
+
+#invisible {
+    display: none;
+    visibility: hidden;
+}
+
+/* Grid layout */
+#idgamemode {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+    background-color: red;
+}
+
+#idgamemodein {
+    background-color: red;
+}
+
+#PageWrapper {
+    display: flex;
+}
+
+#UserModelWrapper,
+#divWrapper {
+    height: 500px;
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 25px;
+    background-color: #252525;
+    border-radius: 4px;
+    flex-direction: column;
+}
+
+#other {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: flex-start;
+    margin-left: 25px;
+    width: 100%;
+}
+
+#sideWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Stats Boxes */
+#MainStats,
+#LvlBar,
+#StatTable,
+#RecorededStats {
+    background-color: #252525;
+    border-radius: 4px;
+    width: 93%;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#lbtable {
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    height: 90%;
+    width: 93%;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+#skin {
+    width: 75%;
+    padding-left: 22.5%;
+}
+
+#skintext {
+    text-align: center;
+    color: black;
+}
+
+table {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 50%;
+}
+
+/* Progress bar styles */
+.LevelBar {
+    border-radius: 5px;
+    padding-left: 1%;
+    font-style: bold;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 1px;
+}
+
+.container {
+    background-color: #ddd;
+    border-radius: 7px;
+}
+
+.skills {
+    border-radius: 5px;
+    text-align: right;
+    height: 100%;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.name {
+    padding: 10%;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Search Box */
+.search-box {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #cd595a;
+    height: 60px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    background: none;
+    width: 0;
+    padding: 0;
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    transition: 0.3s;
+    line-height: 40px;
+}
+
+.search-input::placeholder {
+    color: #dbc5b0;
+}
+
+.search-btn {
+    color: #fff;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #cd595a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.search-input:focus,
+.search-input:not(:placeholder-shown),
+.search-box:hover > .search-input {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn,
+.search-input:focus + .search-btn,
+.search-input:not(:placeholder-shown) + .search-btn {
+    background: #fff;
+    color: #cd595a;
+}

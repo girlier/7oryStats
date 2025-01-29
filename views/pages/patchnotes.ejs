@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Patch Notes </title>
+    <script>
+      function Search() {
+        let player = document.getElementById('searchtext').value
+        if (player == "") {
+        } else {
+          location.replace(`http://localhost:690/p/${document.getElementById('searchtext').value}`)
+        }
+      }
+      document.addEventListener('keydown', function(event) {
+        if (event.keyCode == 13) {
+          Search()
+        }
+      });
+    </script>
+    <style>
+      * {
+        font-family: "calibri"
+      }
+      body {
+        margin: 2%;
+        background-color: #252525;
+        color: rgb(255, 249, 248)
+      }
+      #text {
+        padding-top: 10%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+      }
+      /* div */
+      .search-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #cd595a;
+        height: 40px;
+        border-radius: 50px;
+        padding: 10px;
+      }
+      /* input */
+      .search-input {
+        outline: none;
+        border: none;
+        background: none;
+        width: 0;
+        padding: 0;
+        color: #fff;
+        float: left;
+        font-size: 16px;
+        transition: .3s;
+        line-height: 40px;
+      }
+      .search-input::placeholder {
+        color: #dbc5b0;
+      }
+      /* icon */
+      .search-btn {
+        color: #fff;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background: #cd595a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: .3s;
+      }
+      .search-input:focus,
+      .search-input:not(:placeholder-shown) {
+        width: 240px;
+        padding: 0 6px;
+      }
+      .search-box:hover > .search-input {
+        width: 240px;
+        padding: 0 6px;
+      }
+      .search-box:hover > .search-btn,
+      .search-input:focus + .search-btn,
+      .search-input:not(:placeholder-shown) + .search-btn {
+        background: #fff;
+        color: #cd595a;
+      }
+      #text {
+        text-shadow: 5px 5px #0d0d0d;
+      }
+      p {
+        text-align: center;
+        font-size: 25px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id='text'> Patch Notes </h1>
+    <h2> Alpha 1 - First Public Release </h2>
+    <p><br> This is the first Release, therefore it is very buggy. <br> If you find any bugs or have any
+      suggestions join the discord </br> Thanks for the support - 7ory </p>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Panton', sans-serif;
+}
+
+body {
+  margin: 2%;
+  background-color: #252525;
+  color: rgb(255, 249, 248);
+}
+
+/* Form Styles */
+form.searchform input[type=text] {
+  float: left;
+  border: 1px solid grey;
+  width: 80%;
+  padding: 17.6px;
+  background: #0f0f0f;
+  color: white;
+}
+
+form.searchform button {
+  float: left;
+  padding: 17.8px;
+  width: 10%;
+  background: #363636;
+  color: white;
+  border: 1px solid grey;
+}
+
+form.searchform button:hover {
+  background: #252525;
+}
+
+/* Site Name */
+#sitename {
+  padding-top: 10%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 5px 5px #161616;
+}
+
+/* General Styles */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Search Bar */
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #cd595a;
+  height: 60px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.search-input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 0;
+  padding: 0;
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  transition: .3s;
+  line-height: 40px;
+}
+
+.search-input::placeholder {
+  color: #dbc5b0;
+}
+
+/* Search Button */
+.search-btn {
+  color: #fff;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #cd595a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.search-input:focus,
+.search-input:not(:placeholder-shown) {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-input {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn,
+.search-input:focus + .search-btn,
+.search-input:not(:placeholder-shown) + .search-btn {
+  background: #fff;
+  color: #cd595a;
+}
+
+/* Patch Link */
+#Patch {
+  text-decoration: none;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+/* Login Button */
+#login-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #cd595a;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+#login-button:hover {
+  background-color: #e87a7b;
+}

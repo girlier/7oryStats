@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html theme="">
+    <head>
+        <script src="js/duel.js"></script>
+        <link rel="stylesheet" href="css/duel.css"> 
+        <meta name="google" content="notranslate" /> <!-- Google wants to translate my page to cantoneese -->
+        
+        <script>
+            let searchbox = document.getElementById("searchbox")
+            searchbox.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("searchbutton").click();
+            }
+            function changetheme() {
+                console.log(':(')
+                getElementsByTagName("html").setAttribute("data-theme", "fruit")
+            }
+        })
+        </script>
+
+        <style> 
+            :root {
+                --textshaddow-cl: #292929;
+                --colour-bg: #252525;
+                --table-cl: #363636;
+                --hover-cl: #1d1b1b;
+                --text-cl: #ffe8e8;
+            }
+            html[theme='fruit'] {
+                --textshaddow-cl: #874356;
+                --colour-bg: #fddebf;
+                --table-cl: #F68989;
+                --hover-cl: #C65D7B;
+                --text-cl: #874356;
+            }
+            html[theme='forest'] {
+                --textshaddow-cl: #BB9981;
+                --colour-bg: #F4FCD9;
+                --table-cl: #C5D8A4;
+                --hover-cl: #BB9981;
+                --text-cl: #534340;
+            }
+            body {
+                margin: 2%;
+                font-family:"Calibri";
+                background-color: var(--colour-bg);
+                color: var(--text-cl)
+            }
+    
+            button {
+                background-color: var(--hover-cl);
+                border: none;
+                color: var(--text-cl);
+                font-weight: bold;
+                padding: 5px;
+    
+            }
+    
+            #playername {
+                color: var(--text-cl);
+                text-align: center;
+                text-shadow: 2.5px 2.5px 2.5px var(--textshaddow-cl);
+            }
+    
+            .buttonclass {
+                width: 100%;
+            }
+    
+            #bduelpredictionnd {
+                display: block;
+                text-align: center;
+                font-size: 10px;
+            }
+    
+            .DuelTableNumb{
+                text-align: left;
+                padding-left: 8px;
+                padding-top: 5px;
+                padding-bottom: 5px; 
+                text-align: left;
+            }
+    
+            table {
+                table-layout: auto;
+                width: 100%;
+                font-weight: bold;
+            }
+    
+            tr:nth-child(even) {
+                background-color: var(--colour-bg);
+            }
+    
+            tr:nth-child(odd) {
+                background-color: var(--table-cl);
+            }
+    
+            tr:hover {
+                background-color: var(--hover-cl);
+            }
+    
+            th {
+                background-color: var(--hover-cl);
+            }
+    
+            input {
+                background-color: var(--table-cl);
+                color: white;
+                border: none;
+                padding-left: 4px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            } 
+    
+            .tt {
+                background-color: var(--colour-bg);
+                font-weight: bold;
+                font-size: 25px;
+                text-align: center;
+                padding: 30px;
+    
+            }
+    
+            #tt {
+                border-style: solid;
+                border-width: 10px;
+                border-color: var(--hover-cl);
+                text-align: center;
+    
+            }
+    
+            #tableother {
+                text-align: center;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    
+    <body> 
+        <div id=page>
+            <input id="searchbox"> </input><button id="searchbutton"> Search </button>
+            <button id="searchbutton" onclick="changetheme()"> Theme </button>
+            <% if (rank == '[VIP]') {  %>
+                <h1 style="color:#55FF55" id="playername"> <%= rank %> <%= user %> </h1>
+            <% } %>
+            <% if (rank == '[VIP+]') { %>
+                <h1 style="color:#55FF55" id="playername"> <%= rank %> <%= user %> </h1>
+            <% } %>
+            <% if (rank == '[MVP]') { %>
+                <h1 style="color:#55FFFF" id="playername"> <%= rank %> <%= user %> </h1>
+            <% } %>
+            <% if (rank == '[MVP+]') { %>
+                <h1 style="color:#55FFFF" id="playername"> <%= rank %> <%= user %> </h1>
+            <% } %>
+            <% if (rank == '[MVP++]') { %>
+                <h1 style="color:#FFAA00" id="playername"> <%= rank %> <%= user %> </h1>    
+            <% } %>
+            <% if (rank == '[YOUTUBER]') { %>
+                <h1 style="color:#FF5555" id="playername"> <%= rank %> <%= user %> </h1>  
+            <% } %>
+            <table id="tt">
+                <tr>
+                    <th class="tt" id="overallwins"  width=33%> <p>Wins: <%= wins %> </p></th>
+                    <th class="tt"  id="overalldiv"  width=33%> <p>Division: <%= overalldivision %> </p></th> 
+                    <th class="tt"  id="overallwl"  width=33%> <p>W/L:</p> </th>
+                </tr>
+            </table>
+            <table id="tableother" cellpadding="0", cellspacing="0">
+                <tr>
+                    <div id="duelwinstats">
+                        <td id="TotalDuelWins"></td>
+                        <td id="TotalDuelLosses"></td>
+                        <td id="TotalDuelWinRate"></td>
+                        <td id="TotalDuelWinLoss"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div id="duelbowshots" >
+                        <td id="TotalDuelBowShots"></td>
+                        <td id="TotalDuelBowHits"></td>
+                        <td id="TotalDuelBowHitRate"></td>
+                        <td id="TotalDueldamage_dealt"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div id=duelotherstats>
+                        <td id="TotalDuelBlocksPlaced"></td>
+                        <td id="TotalDuelgolden_apples_eaten"></td>
+                        <td id="TotalDuelhealth_regenerated"></td>
+                        <td id="TotalDuelcoins"></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div id=duelotherstats>
+                        <td id="TotalDuelBlocksPlaced"></td>
+                        <td id="TotalDuelgolden_apples_eaten"></td>
+                        <td id="TotalDuelhealth_regenerated"></td>
+                        <td id="TotalDuelcoins"></td>
+                    </div>
+                </tr>
+            </table>
+    
+            <div id="divionsnd"> 
+                <button class ="buttonclass" id="bdivisions"'> Divions </button>
+                <div id = "divisions">
+                <table id="tableid" cellpadding="0", cellspacing="0">
+                    <tr> 
+                        <th class="DuelTableNumb"> Mode </th>
+                        <th class="DuelTableNumb"> Div </th>
+                        <th class="DuelTableNumb"> Wins </th>
+                        <th class="DuelTableNumb"> Losses </th>
+                        <th class="DuelTableNumb"> WL </th>
+                        <th class="DuelTableNumb"> WinRate </th>
+                        <th class="DuelTableNumb"> Kills </th>
+                        <th class="DuelTableNumb"> Deaths </th>
+                        <th class="DuelTableNumb"> KD </th>
+                        <th class="DuelTableNumb"> WS </th>
+                    </tr>
+                    <% for (let i = 0; i < rows.length; i++) {%> 
+                        <tr>
+                            <td class="DuelTableNumb"> <%= rows[i][0] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][2] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][3] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][4] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][5] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][6] %>% </td>
+                            <td class="DuelTableNumb"> <%= rows[i][7] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][8] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][9] %> </td>
+                            <td class="DuelTableNumb"> <%= rows[i][10] %> </td>
+                        </tr>
+                    <% } %> 
+                </table>
+    
+    
+                    
+    
+    
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>
+

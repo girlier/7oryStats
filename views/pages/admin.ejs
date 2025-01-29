@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            color: white;
+            background-color: #252525;
+        }
+
+        .table-input {
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            background-color: #292929;
+            color: white;
+        }
+
+        .no-outline:focus {
+            outline: none;
+        }
+
+        .my-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .my-table th,
+        .my-table td {
+            padding: 0.75rem;
+            text-align: left;
+            vertical-align: top;
+            border-top: 1px solid #1d1b1b;
+        }
+
+        .my-table th {
+            font-weight: 700;
+            background-color: #292929;
+        }
+
+        .my-table tbody tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .my-table tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+
+        .save-button {
+            background-color: rgb(32, 32, 32);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+
+        .delete-button:hover {
+            background-color: rgb(71, 23, 23);
+        }
+
+        .save-button:hover {
+            background-color: rgb(71, 23, 23);
+        }
+
+        .save-button:hover .save-button {
+            background-color: rgb(71, 23, 23);
+        }
+
+        #sql {
+            margin-top: 2em;
+            width: 100%;
+            background-color: #252525;
+        }
+
+        #sql-textbox {
+            background-color: #2b2b2b;
+            color: white;
+            border: none;
+        }
+
+        #sql-button {
+            margin-bottom: 1em;
+            background-color: #2b2b2b;
+            color: white;
+            border: none;
+        }
+
+        #table-input {
+            background-color: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Admin Panel</h1>
+    <h2>Hello, <%= name %></h2>
+
+    <form method="post" action="/edit">
+        <table id="tableid" class="my-table" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Is Admin?</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id='mainstatstable'>
+                <% var j = 0 %>
+                <% for (let i = 0; i < AccountDB.length; i++) {%>
+                <!-- makes a new column for each account in the db -->
+                <% if (AccountDB[i][2] !== 1) { %>
+                <!-- if account is not admin -->
+                <% j += 1 %>
+                <tr class="row">
+                    <td>
+                        <div>
+                            <input class="table-input" type="text" name="NewAccountName" value="<%= AccountDB[i][0] %>">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input class="table-input" type="text" name="Password" value="<%= AccountDB[i][1] %>">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <input class="table-input" type="text" name="AdminAccess"
+                                value="<%= (AccountDB[i][2]) ? 'true' : 'false' %>">
+                        </div>
+                    </td>
+                    <td>
+                        <input type="hidden" name="AccountDelete" value="<%= AccountDB[i][0] %>">
+                        <input class="table-input" type="checkbox" name="deleteCheckbox<%= j %>">
+                        </input>
+                        <input type="hidden" name="AdminUser" value="<%= name %>">
+                    </td>
+                </tr>
+                <% } else { %>
+                <!-- if account is admin, this makes it non editable because the user is an admin -->
+                <tr class="row">
+                    <td>
+                        <div>
+                            <%= AccountDB[i][0] %>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <%= AccountDB[i][1] %>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <%= (AccountDB[i][2] === 1) ? 'true' : 'false' %>
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <% } %>
+                <% } %>
+            </tbody>
+        </table>
+        <button class="save-button" type="submit"> Save </button>
+    </form>
+
+    <form id="sql" method="post" action="/sql">
+        <h1> Raw SQL Command </h1>
+        <input id="sql-textbox" type="text" name="sqlCommand" />
+        <input id="sql-button" type="submit" />
+        <input type="hidden" name="AdminUser" value="<%= name %>">
+    </form>
+</body>
+
+</html>
