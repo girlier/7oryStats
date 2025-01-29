@@ -2,7 +2,7 @@
 # NOT MAINTAINED
 **Due to the change in Hypixel API, I cannot continue working on this project!**
 
-![Logo](http://url/to/https://github.com/girlier/7oryStats/Logo.png)
+![Logo](http://url/to/https://github.com/girlier/7oryStats/Logo.webp)
 ---
 
 **7ory Stats** is a **data analysis stat website** built for the **Minecraft PVP server, Hypixel Duels**. This website allows users to easily search up any player registered on the server and view detailed stats for their gameplay in various duels modes.
@@ -89,7 +89,7 @@ Check out the live website and start tracking your stats now! [7ory Stats Websit
 
 ## 🔥 Screenshots
 
-![Example](http://url/to/https://github.com/girlier/7oryStats/StatPageExample.png)
+![Example](http://url/to/https://github.com/girlier/7oryStats/StatPageExample.webp)
 
 > Example: Here is how the stats of a player might look!
 
